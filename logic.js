@@ -1,22 +1,43 @@
 const testId=document.getElementById('test')
 
 const selections = document.querySelectorAll('[data-selection]')
-
+const SELECTIONS=[
+   {
+      name:'rock',
+      emoji:'🤘',
+      beats:'scissor'
+   },
+   {
+      name:'paper',
+      emoji:'✋',
+      beats:'rock'
+   },
+   {
+      name:'scissor',
+      emoji:'✌️',
+      beats:'paper'
+   }
+]
 
 
 
 // All Selection laid here above...........
 
 
-selections.forEach(selection=>{
-   selection.addEventListener('click',e=>{
-      const selectionName = selection.dataset.selection
+selections.forEach(selectionButton=>{
+   selectionButton.addEventListener('click',e=>{
+      const selectionName = selectionButton.dataset.selection
+      const selecttaria = SELECTIONS.find(silver=> silver.name === selectionName)
+      makeSelection(selecttaria)
 
-
-      // console.log(selectionName)
-      // printOut(selectionName) 
+      
    })
 })
+
+function makeSelection(sel){
+  console.log(sel)
+      printOut(sel) 
+}
 
 
 
