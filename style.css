@@ -1,3 +1,56 @@
 *, *::after, *::before{
     box-sizing: border-box;
 }
+body{
+    background-color: hsla(220, 30%, 50%, .6);
+}
+.full-body-container{
+    max-width: 500px;
+    margin:0 auto;
+}
+.selection-area{
+    text-align: center;
+    margin:0;
+    padding:1rem 0rem;  
+}
+.icon{
+    display: inline-block;
+    font-size:5em;
+    cursor:pointer;
+    transition:transform .5s ease;
+}
+.icon:hover,
+.icon:focus{
+    transform:scale(1.3);
+}
+.icon.paper{
+    margin:0 2rem;
+}
+
+
+/*Result Area Design starts here */
+.result-area{
+    background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+.player-heading{
+    margin-bottom: 1rem;
+}
+
+.player-heading h2{
+    display: inline;
+    margin-right:.5rem;
+    font-size: 2em;
+}
+.score{
+   font-size: 1.5em;  
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color:#333;
+}
+.player{
+    display: block;
+    margin-bottom: 1rem;
+    font-size:2em;
+}
